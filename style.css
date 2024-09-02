@@ -472,3 +472,23 @@ body {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+/* Pause the dance and start watching on hover */
+.duck:hover .duck__foot--1,
+.duck:hover .duck__foot--2,
+.duck:hover .duck__wing,
+.duck:hover .duck__inner {
+  animation-play-state: paused; /* Pause dancing */
+}
+
+.duck:hover .duck__head {
+  animation: watch-head 0.5s linear forwards; /* Start watching */
+}
+
+@keyframes watch-head {
+  0% {
+    transform: translateX(-50%) rotate(10deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg); /* Look straight at the user */
+  }}
